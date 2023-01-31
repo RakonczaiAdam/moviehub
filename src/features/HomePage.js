@@ -2,6 +2,7 @@ import { Box, Card, CardActionArea, CardContent, CardMedia, CircularProgress, Di
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import { API_KEY } from '../../env';
 
 export const HomePage = () => {
     const [state, setState] = useState({
@@ -18,7 +19,7 @@ export const HomePage = () => {
                 url: 'https://advanced-movie-search.p.rapidapi.com/discover/movie',
                 params: {with_genres: 'comedy', page: '1'},
                 headers: {
-                    'X-RapidAPI-Key': '8b9af8045cmsh21bd3c1ca40381bp106122jsn171d265d9a62',
+                    'X-RapidAPI-Key': API_KEY,
                     'X-RapidAPI-Host': 'advanced-movie-search.p.rapidapi.com'
                 }
             };

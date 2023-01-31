@@ -2,6 +2,7 @@ import { Box, CircularProgress, Typography } from '@mui/material';
 import React, { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import axios from 'axios';
+import { API_KEY } from '../../env';
 
 export const Details = () => {
     const [state, setState] = useState({
@@ -17,7 +18,7 @@ export const Details = () => {
             url: 'https://advanced-movie-search.p.rapidapi.com/movies/getdetails',
             params: {movie_id: location.state},
             headers: {
-                'X-RapidAPI-Key': '8b9af8045cmsh21bd3c1ca40381bp106122jsn171d265d9a62',
+                'X-RapidAPI-Key': API_KEY,
                 'X-RapidAPI-Host': 'advanced-movie-search.p.rapidapi.com'
             }
             };

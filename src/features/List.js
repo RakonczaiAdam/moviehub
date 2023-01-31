@@ -4,6 +4,7 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
+import { API_KEY } from '../../env';
 
 export const MyList = () => {
     const [state, setState] = useState({
@@ -24,7 +25,7 @@ export const MyList = () => {
                 url: 'https://advanced-movie-search.p.rapidapi.com/search/movie',
                 params: {query: location.state, page: ""+state.page},
                 headers: {
-                    'X-RapidAPI-Key': '8b9af8045cmsh21bd3c1ca40381bp106122jsn171d265d9a62',
+                    'X-RapidAPI-Key': API_KEY,
                     'X-RapidAPI-Host': 'advanced-movie-search.p.rapidapi.com'
                 }
             };
